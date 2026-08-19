@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belinatti Perez · Advocacia</title>
+  <!-- Bootstrap 5 + ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root {
+      --azul-escuro: #0b2b4f;
+      --ouro: #c9a959;
+      --cinza-claro: #f7f7f7;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      background-color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    .bg-azul-escuro { background-color: var(--azul-escuro); }
+    .text-ouro { color: var(--ouro); }
+    .border-ouro { border-color: var(--ouro); }
+    .btn-ouro {
+      background-color: var(--ouro);
+      color: #0b2b4f;
+      font-weight: 600;
+      border: none;
+      transition: 0.2s;
+    }
+    .btn-ouro:hover {
+      background-color: #b89a4a;
+      color: #0b2b4f;
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(201, 169, 89, 0.3);
+    }
+    .btn-outline-ouro {
+      border: 2px solid var(--ouro);
+      color: var(--ouro);
+      font-weight: 600;
+    }
+    .btn-outline-ouro:hover {
+      background-color: var(--ouro);
+      color: #0b2b4f;
+    }
+    .section-title {
+      border-left: 6px solid var(--ouro);
+      padding-left: 1rem;
+      font-weight: 700;
+      color: var(--azul-escuro);
+    }
+    .card-adv {
+      border: none;
+      border-radius: 20px;
+      transition: 0.25s ease-in-out;
+      background: white;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+    .card-adv:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -12px rgba(11, 43, 79, 0.15);
+    }
+    .card-adv .icon-circle {
+      background: var(--azul-escuro);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: var(--ouro);
+      font-size: 2rem;
+    }
+    .bg-cinza-suave { background-color: var(--cinza-claro); }
+    .footer-link {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .footer-link:hover {
+      color: var(--ouro);
+      text-decoration: underline;
+    }
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-size: 1.3rem;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-icon:hover {
+      background: var(--ouro);
+      color: var(--azul-escuro);
+    }
+    .hero {
+      background: linear-gradient(135deg, #0b2b4f 0%, #1a3f66 100%);
+      padding: 4rem 0 3rem;
+    }
+    .hero h1 {
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .badge-ouro {
+      background-color: var(--ouro);
+      color: #0b2b4f;
+      font-weight: 600;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+    }
+    .politica-box {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2rem 1.5rem;
+      box-shadow: 0 10px 30px -8px rgba(0,0,0,0.05);
+    }
+    @media (max-width: 576px) {
+      .hero { padding: 2.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navbar navbar-expand-lg bg-azul-escuro py-3" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">
+        <i class="bi bi-scale me-2 text-ouro"></i> Belinatti Perez
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrincipal" 
+              aria-controls="navPrincipal" aria-expanded="false" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-2">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#atuacao">Atuação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="#politica">Privacidade</a></li>
+          <li class="nav-item"><a class="btn btn-ouro rounded-pill px-4 ms-lg-2" href="#contato"><i class="bi bi-chat-dots me-1"></i> Fale conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / DESTAQUE -->
+  <section id="inicio" class="hero text-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <span class="badge-ouro d-inline-block mb-3"><i class="bi bi-award-fill me-1"></i> Excelência em Direito</span>
+          <h1 class="display-4 fw-bold lh-1 mb-3">Belinatti Perez <br><span class="text-ouro">Advocacia</span></h1>
+          <p class="lead opacity-75">Protegendo seus direitos com ética, estratégia e compromisso. Mais de 10 meses de atuação sólida em São Paulo.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#contato" class="btn btn-ouro btn-lg rounded-pill px-5 py-3"><i class="bi bi-whatsapp me-2"></i> Agendar consulta</a>
+            <a href="#atuacao" class="btn btn-outline-ouro btn-lg rounded-pill px-5 py-3">Nossas áreas</a>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-4 small text-white-50">
+            <span><i class="bi bi-building me-1 text-ouro"></i> CNPJ: 62.853.731/0001-37</span>
+            <span><i class="bi bi-calendar3 me-1 text-ouro"></i> Abertura: 23/09/2025</span>
+            <span><i class="bi bi-geo-alt me-1 text-ouro"></i> Matriz · SP</span>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <div class="bg-white bg-opacity-10 p-4 rounded-4 backdrop-blur-sm">
+            <i class="bi bi-shield-check display-1 text-ouro"></i>
+            <p class="mt-3 fw-light fs-5">"Justiça e confiança <br>andam juntas."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO (ÍCONES) -->
+  <section id="atuacao" class="py-5 bg-cinza-suave">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title d-inline-block">Áreas de atuação</h2>
+          <p class="text-secondary mt-2">Soluções jurídicas personalizadas para cada caso.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-bank"></i></div>
+            <h5 class="fw-bold">Direito Civil</h5>
+            <p class="text-secondary small">Contratos, indenizações, responsabilidade civil e mais.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-briefcase"></i></div>
+            <h5 class="fw-bold">Direito Empresarial</h5>
+            <p class="text-secondary small">Sociedades, recuperação judicial, compliance e startups.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-people"></i></div>
+            <h5 class="fw-bold">Direito do Trabalho</h5>
+            <p class="text-secondary small">Reclamações trabalhistas, acordos e defesa de empresas.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-house-heart"></i></div>
+            <h5 class="fw-bold">Direito de Família</h5>
+            <p class="text-secondary small">Divórcios, guarda, pensão e inventários.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-building"></i></div>
+            <h5 class="fw-bold">Direito Imobiliário</h5>
+            <p class="text-secondary small">Compra e venda, locação, usucapião e condomínios.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-adv p-4 text-center">
+            <div class="icon-circle"><i class="bi bi-bar-chart-steps"></i></div>
+            <h5 class="fw-bold">Consultoria Jurídica</h5>
+            <p class="text-secondary small">Prevenção de riscos, pareceres e planejamento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE / DADOS DA EMPRESA -->
+  <section id="sobre" class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="section-title">Sobre o escritório</h2>
+          <p class="mt-4 lead fw-light"><strong class="text-azul-escuro">Belinatti Perez</strong> é uma sociedade empresária limitada com sede na Avenida Paulista, atuando com excelência e transparência.</p>
+          <div class="row g-3 mt-3">
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>CNPJ:</strong> 62.853.731/0001-37</div>
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>Abertura:</strong> 23/09/2025</div>
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>Porte:</strong> Micro Empresa</div>
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>Capital Social:</strong> R$ 60.000,00</div>
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>Situação:</strong> Ativa</div>
+            <div class="col-sm-6"><i class="bi bi-check-circle-fill text-ouro me-2"></i> <strong>Natureza:</strong> Sociedade Empresária</div>
+          </div>
+          <div class="mt-4 p-3 bg-cinza-suave rounded-4">
+            <i class="bi bi-geo-alt-fill text-ouro me-2"></i> <strong>Endereço:</strong> Av. Paulista, 1001 · Sala 10 · Bela Vista · São Paulo/SP · CEP 01311-100
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-azul-escuro text-white p-5 rounded-4">
+            <i class="bi bi-quote display-4 text-ouro"></i>
+            <p class="fs-5 fst-italic">"Nosso compromisso é com a justiça e a segurança jurídica dos nossos clientes, sempre com transparência e dedicação."</p>
+            <hr class="border-ouro opacity-25">
+            <div class="d-flex align-items-center gap-3">
+              <div><i class="bi bi-envelope-paper fs-3 text-ouro"></i></div>
+              <div><small>belinatti.perez@adv.br</small><br><span class="text-ouro">(12) 99123-4567</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOÇÃO / DIFERENCIAIS -->
+  <section class="py-5 bg-azul-escuro text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 mb-4">
+          <h2 class="text-ouro"><i class="bi bi-stars me-2"></i> Por que escolher a Belinatti Perez?</h2>
+        </div>
+        <div class="col-md-4 mb-3">
+          <i class="bi bi-clock-history display-4 text-ouro"></i>
+          <h5 class="mt-3">Agilidade e Estratégia</h5>
+          <p class="opacity-75">Soluções rápidas sem perder a precisão jurídica.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <i class="bi bi-chat-square-text display-4 text-ouro"></i>
+          <h5 class="mt-3">Atendimento Personalizado</h5>
+          <p class="opacity-75">Cada caso é único, nossa abordagem também.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <i class="bi bi-shield-lock display-4 text-ouro"></i>
+          <h5 class="mt-3">Ética e Confidencialidade</h5>
+          <p class="opacity-75">Sigilo absoluto e conduta irrepreensível.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO + LOCALIZAÇÃO -->
+  <section id="contato" class="py-5 bg-cinza-suave">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <h2 class="section-title">Fale com a gente</h2>
+          <p class="mt-3">Estamos prontos para atender você. Entre em contato por telefone, e-mail ou venha nos visitar.</p>
+          <ul class="list-unstyled mt-4">
+            <li class="mb-3"><i class="bi bi-telephone-fill text-ouro me-3"></i> (12) 99123-4567</li>
+            <li class="mb-3"><i class="bi bi-envelope-fill text-ouro me-3"></i> contato@belinattiperez.adv.br</li>
+            <li class="mb-3"><i class="bi bi-geo-alt-fill text-ouro me-3"></i> Av. Paulista, 1001 · Sala 10 · Bela Vista</li>
+          </ul>
+          <div class="mt-4 p-3 bg-white rounded-4 shadow-sm">
+            <i class="bi bi-clock me-2 text-ouro"></i> Atendimento: seg–sex, 9h–18h
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="bg-white p-4 rounded-4 shadow-sm">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.097!2d-46.656!3d-23.561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7f7f7f7f7%3A0x8f8f8f8f8f8f8f8f!2sAv.%20Paulista%2C%201001%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001311-100!5e0!3m2!1spt-BR!2sbr!4v1742900000000" width="100%" height="220" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLÍTICA DE PRIVACIDADE -->
+  <section id="politica" class="py-5">
+    <div class="container">
+      <div class="politica-box">
+        <div class="d-flex align-items-center gap-3">
+          <i class="bi bi-lock-fill text-ouro fs-1"></i>
+          <h3 class="mb-0">Política de Privacidade</h3>
+        </div>
+        <hr>
+        <p class="text-secondary">Na <strong>Belinatti Perez</strong>, sua privacidade é tratada com rigor. Coletamos dados apenas para prestar nossos serviços jurídicos com excelência, respeitando a Lei Geral de Proteção de Dados (LGPD).</p>
+        <div class="row row-cols-1 row-cols-md-2 g-3 mt-2">
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Dados fornecidos voluntariamente em contatos.</div>
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Uso exclusivo para finalidades jurídicas.</div>
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Não compartilhamos informações com terceiros sem consentimento.</div>
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Armazenamento seguro e sigiloso.</div>
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Você pode solicitar alteração ou exclusão dos seus dados.</div>
+          <div><i class="bi bi-check2-circle text-ouro me-2"></i> Para dúvidas: privacidade@belinattiperez.adv.br</div>
+        </div>
+        <p class="mt-3 small text-secondary"><i class="bi bi-calendar-event me-1"></i> Atualizado em: março de 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-azul-escuro text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="text-ouro"><i class="bi bi-scale me-2"></i> Belinatti Perez</h5>
+          <p class="small opacity-75">Escritório de advocacia com atuação em São Paulo, focado em resultados e segurança jurídica.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-ouro">Links rápidos</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#inicio" class="footer-link">Início</a></li>
+            <li><a href="#atuacao" class="footer-link">Áreas de atuação</a></li>
+            <li><a href="#sobre" class="footer-link">Sobre o escritório</a></li>
+            <li><a href="#politica" class="footer-link">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-ouro">Contato</h6>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-geo-alt me-2"></i> Av. Paulista, 1001 · Sala 10</li>
+            <li><i class="bi bi-envelope me-2"></i> contato@belinattiperez.adv.br</li>
+            <li><i class="bi bi-telephone me-2"></i> (12) 99123-4567</li>
+            <li><i class="bi bi-clock me-2"></i> Seg–Sex 9h–18h</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25 my-4">
+      <div class="text-center small opacity-75">
+        &copy; 2026 Belinatti Perez · Escritório Advocacia Belinatti Perez Serviços Associados LTDA · CNPJ 62.853.731/0001-37
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
